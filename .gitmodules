@@ -1,0 +1,3 @@
+[submodule "vendor/flixel"]
+	path = vendor/flixel
+	url = https://github.com/AdamAtomic/flixel.git
