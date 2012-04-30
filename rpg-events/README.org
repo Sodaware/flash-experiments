@@ -1,0 +1,20 @@
+* Experiment - RPG Events
+
+** Purpose
+Create a simple map that you can walk around. Have some small
+interactive objects and a script cut-scene.
+
+** Requirements
+
+*** TODO Tilemap
+*** TODO Moveable Character
+*** TODO Chest you can open
+*** TODO NPC you can talk to [0/2]
+    - [ ] Says a line of text
+    - [ ] Says something different if you have item from chest
+*** TODO Cutscene [0/5]
+    - [ ] Pushing a lever triggers the scene
+    - [ ] Someone walks by
+    - [ ] Says something
+    - [ ] Walks off
+    - [ ] Play resumes
