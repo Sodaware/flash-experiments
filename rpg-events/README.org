@@ -1,8 +1,16 @@
 * Experiment - RPG Events
 
 ** Purpose
+
 Create a simple map that you can walk around. Have some small
 interactive objects and a script cut-scene.
+
+
+** Info
+
+Nothing too special, just a character walking around a map like in
+most RPG's. Game objects are built using the [[http://sodaware.github.com/apollo/][apollo]] entity framework.
+
 
 ** Requirements
 

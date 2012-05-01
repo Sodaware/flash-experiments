@@ -1,3 +1,6 @@
 [submodule "vendor/flixel"]
 	path = vendor/flixel
 	url = https://github.com/AdamAtomic/flixel.git
+[submodule "vendor/apollo"]
+	path = vendor/apollo
+	url = git@github.com:Sodaware/apollo.git
