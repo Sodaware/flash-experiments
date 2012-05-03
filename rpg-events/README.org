@@ -19,7 +19,20 @@ most RPG's. Game objects are built using the [[http://sodaware.github.com/apollo
 Smaller components are better than big, monolithic ones. A lot of functionality
 can be shared by splitting a component. For example, in this demo the player was
 originally a PlayerComponent which contained a Flixel sprite. However, NPC's and
-other objects also need to sprite, so this should be moved
+other objects also need to sprite, so this needed to be moved to a more generic
+component (BodyComponent).
+
+DON'T subclass your components. Split a component into two (or more) different
+ones instead. One of the nice things about a System based approach is you can
+use the same component for two totally different things. You can also have
+components that have no one-to-one mapping with a system. For example:
+
+    - ActorComponent -- Holds sprite details (location, image)
+    - PlayerComponent -- Marks an object as the player (could do this with tags,
+      groups or names if you want)
+    - PlayerService -- Updates entities marked as player (again, could be
+      component or tag based). Works on the Actor component, rather than the
+      Player component. This way data does not have to be duplicated.
 
 
 ** Requirements
