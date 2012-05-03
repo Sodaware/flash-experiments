@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project name="ineptia" default="build">
+	
+	<!-- path to Libraries folder -->
+	<property name="basedir" value="." />
+	<property name="classpath" value="../" />
+
+	<property name="source.dir" value="src" />
+	<property name="source.file" value="Main.as" />
+	<property name="deploy.dir" value="bin" />
+	<property name="output.file" value="rpg-events.swf" />
+	<property name="background.color" value="000000" />
+	<property name="framerate" value="24" />
+		
+	<target name="build">
+		<exec program="mxmlc">
+			
+			<arg line="--static-link-runtime-shared-libraries=true" />
+
+			<!-- Library paths -->
+			<arg line='-sp="${basedir}/src/"' />
+			<arg line='-sp="${classpath}vendor/flixel/"' />
+			<arg line='-sp="${classpath}vendor/apollo/"' />
+			
+			<!-- Output values -->
+			
+			<!--Output File-->
+			<arg line='-o="${basedir}/${deploy.dir}/${output.file}"'/>
+			
+			<!--Source File of Main Application-->
+			<!--Put Double Hyphen Before Source File-->
+			<arg line="--" />
+			<arg line='"${basedir}/${source.dir}/${source.file}"' />
+		</exec>
+	</target>
+</project>
