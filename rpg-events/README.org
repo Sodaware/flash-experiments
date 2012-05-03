@@ -12,10 +12,20 @@ Nothing too special, just a character walking around a map like in
 most RPG's. Game objects are built using the [[http://sodaware.github.com/apollo/][apollo]] entity framework.
 
 
+** Development Notes
+
+*** Components
+
+Smaller components are better than big, monolithic ones. A lot of functionality
+can be shared by splitting a component. For example, in this demo the player was
+originally a PlayerComponent which contained a Flixel sprite. However, NPC's and
+other objects also need to sprite, so this should be moved
+
+
 ** Requirements
 
-*** TODO Tilemap
-*** TODO Moveable Character
+*** DONE Tilemap
+*** DONE Moveable Character
 *** TODO Chest you can open
 *** TODO NPC you can talk to [0/2]
     - [ ] Says a line of text
